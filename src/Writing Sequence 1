@@ -1,0 +1,484 @@
+SetTrf(0, 0, 0, 0, 0, 0)
+SetGripperForce(100) // 80% of 40 N = 32 N of force
+SetGripperVel(100) // 100% of nominal speed (~100 mm/s)
+SetCartLinVel(30) // Set linear speed to 50 mm/s
+SetCartAcc(100) // mm/s²
+MoveGripper(30)//Ensure gripper isnt too wide to hit off things
+
+//Move to Marker 1 / Slot 1
+MovePose(70, -110, 172, 90, 0.0, -90.0) // Neutral Position
+MovePose(176, -158, 172, 90, 0.0, -90.0) // Move to pick position
+MovePose(173.8, -194.8, 172, 90, 0.0, -90.0) // Move to pick position
+MovePose(174, -194.8, 112, 90, 0.0, -90.0) // Move to pick position
+
+// Close gripper around the Marker 1
+Delay(1.0)
+GripperClose() // Fully closes the gripper
+Delay(0.5) // Give it time to apply force
+
+//Bring the Marker 1 up out of the fixture
+MoveLinRelWrf(0.0, 0.0, 70, 0.0, 0.0, 0.0)// Bring the nozzle up
+Delay(0.5)
+MoveLinRelWrf(0.0, 60.0, 0.0, 0.0, 0.0, 0.0)// Bring the nozzle out
+Delay(0.5)
+
+//Move above origin
+MovePose(70, 128, 118, -90, 0.0, 90) //Move to origin //5mm above contact height
+93.8
+MovePose(70, 128, 114, -90, 0.0, 90)//Move to origin //5mm above contact height
+93.8
+
+//S
+MoveLinRelWRF(0, 0, -3.1, 0, 0, 0) //Lower Sharpie onto page
+
+Delay(0.2)
+MoveLinRelWRF(-0.44, -0.35, 0, 0, 0, 0)
+MoveLinRelWRF(-0.54, -0.49, 0, 0, 0, 0)
+MoveLinRelWRF(-0.57, -0.64, 0, 0, 0, 0)
+MoveLinRelWRF(-0.38, -0.66, 0, 0, 0, 0)
+MoveLinRelWRF(-0.21, -0.66, 0, 0, 0, 0)
+MoveLinRelWRF(-0.08, -0.72, 0, 0, 0, 0)
+MoveLinRelWRF(0.09, -0.79, 0, 0, 0, 0)
+MoveLinRelWRF(0.27, -0.74, 0, 0, 0, 0)
+MoveLinRelWRF(0.53, -0.72, 0, 0, 0, 0)
+MoveLinRelWRF(0.81, -0.53, 0, 0, 0, 0)
+MoveLinRelWRF(0.94, -0.18, 0, 0, 0, 0)
+MoveLinRelWRF(0.83, 0.12, 0, 0, 0, 0)
+MoveLinRelWRF(0.84, 0.39, 0, 0, 0, 0)
+MoveLinRelWRF(0.83, 0.72, 0, 0, 0, 0)
+MoveLinRelWRF(0.41, 0.51, 0, 0, 0, 0)
+MoveLinRelWRF(1.14, 1.58, 0, 0, 0, 0)
+MoveLinRelWRF(1.39, 1.72, 0, 0, 0, 0)
+MoveLinRelWRF(0.92, 0.82, 0, 0, 0, 0)
+MoveLinRelWRF(1.07, 0.54, 0, 0, 0, 0)
+MoveLinRelWRF(0.86, 0.14, 0, 0, 0, 0)
+MoveLinRelWRF(1.02, -0.17, 0, 0, 0, 0)
+MoveLinRelWRF(0.84, -0.45, 0, 0, 0, 0)
+MoveLinRelWRF(0.72, -0.72, 0, 0, 0, 0)
+MoveLinRelWRF(0.56, -1.05, 0, 0, 0, 0)
+MoveLinRelWRF(0.16, -1.24, 0, 0, 0, 0)
+MoveLinRelWRF(-0.13, -0.93, 0, 0, 0, 0)
+MoveLinRelWRF(-0.47, -1.02, 0, 0, 0, 0)
+MoveLinRelWRF(-1.06, -1.08, 0, 0, 0, 0)
+MoveLinRelWRF(-1.22, -0.78, 0, 0, 0, 0)
+
+//Sharpie up
+MoveLinRelWRF(0, 0, 3.1, 0, 0, 0) //Bring Sharpie up
+
+//o
+MoveLinRelWRF(-7.31, 16.18, 0, 0, 0, 0)//Move to next point
+
+MoveLinRelWRF(0, 0, -3, 0, 0, 0) //Lower Sharpie onto page
+
+MoveLinRelWRF(0.08, 0.88, 0, 0, 0, 0)
+MoveLinRelWRF(0.23, 0.88, 0, 0, 0, 0)
+MoveLinRelWRF(0.38, 0.78, 0, 0, 0, 0)
+MoveLinRelWRF(0.54, 0.74, 0, 0, 0, 0)
+MoveLinRelWRF(0.63, 0.62, 0, 0, 0, 0)
+MoveLinRelWRF(0.74, 0.52, 0, 0, 0, 0)
+MoveLinRelWRF(0.75, 0.35, 0, 0, 0, 0)
+MoveLinRelWRF(0.9, 0.23, 0, 0, 0, 0)
+MoveLinRelWRF(0.87, 0.07, 0, 0, 0, 0)
+MoveLinRelWRF(0.96, -0.09, 0, 0, 0, 0)
+MoveLinRelWRF(1.02, -0.31, 0, 0, 0, 0)
+MoveLinRelWRF(0.81, -0.43, 0, 0, 0, 0)
+MoveLinRelWRF(0.81, -0.65, 0, 0, 0, 0)
+MoveLinRelWRF(0.65, -0.8, 0, 0, 0, 0)
+MoveLinRelWRF(0.43, -0.87, 0, 0, 0, 0)
+MoveLinRelWRF(0.27, -0.93, 0, 0, 0, 0)
+MoveLinRelWRF(0.09, -1, 0, 0, 0, 0)
+MoveLinRelWRF(-0.09, -0.97, 0, 0, 0, 0)
+MoveLinRelWRF(-0.27, -0.96, 0, 0, 0, 0)
+MoveLinRelWRF(-0.45, -0.88, 0, 0, 0, 0)
+MoveLinRelWRF(-0.64, -0.8, 0, 0, 0, 0)
+MoveLinRelWRF(-0.8, -0.64, 0, 0, 0, 0)
+MoveLinRelWRF(-0.81, -0.43, 0, 0, 0, 0)
+MoveLinRelWRF(-0.98, -0.3, 0, 0, 0, 0)
+MoveLinRelWRF(-1, -0.1, 0, 0, 0, 0)
+MoveLinRelWRF(-0.87, 0.07, 0, 0, 0, 0)
+MoveLinRelWRF(-0.81, 0.2, 0, 0, 0, 0)
+MoveLinRelWRF(-0.9, 0.42, 0, 0, 0, 0)
+MoveLinRelWRF(-0.78, 0.56, 0, 0, 0, 0)
+MoveLinRelWRF(-0.56, 0.54, 0, 0, 0, 0)
+MoveLinRelWRF(-0.51, 0.73, 0, 0, 0, 0)
+MoveLinRelWRF(-0.38, 0.81, 0, 0, 0, 0)
+MoveLinRelWRF(-0.24, 0.89, 0, 0, 0, 0)
+MoveLinRelWRF(-0.07, 0.87, 0, 0, 0, 0)
+MoveLinRelWRF(0.08, 0.88, 0, 0, 0, 0)
+
+//Sharpie up
+MoveLinRelWRF(0, 0, 3, 0, 0, 0) //Bring Sharpie up
+
+//n
+
+MoveLinRelWRF(-0.48, 8.15, 0, 0, 0, 0)//Move to next point
+
+MoveLinRelWRF(0, 0, -2.9, 0, 0, 0)//Lower Sharpie onto page
+
+MoveLinRelWRF(5.76, -0.06, 0, 0, 0, 0)
+MoveLinRelWRF(1.23, -0.02, 0, 0, 0, 0)
+MoveLinRelWRF(3.97, 0.000, 0, 0, 0, 0)
+MoveLinRelWRF(-3.97, 0, 0, 0, 0, 0)
+MoveLinRelWRF(-1.23, 0.020, 0, 0, 0, 0)
+MoveLinRelWRF(-1.11, 0.08, 0, 0, 0, 0)
+MoveLinRelWRF(-0.78, 0.130, 0, 0, 0, 0)
+MoveLinRelWRF(-0.77, 0.28, 0, 0, 0, 0)
+MoveLinRelWRF(-0.9, 0.550, 0, 0, 0, 0)
+MoveLinRelWRF(-0.79, 0.79, 0, 0, 0, 0)
+MoveLinRelWRF(-0.52, 0.800, 0, 0, 0, 0)
+MoveLinRelWRF(-0.35, 0.93, 0, 0, 0, 0)
+MoveLinRelWRF(-0.14, 1.110, 0, 0, 0, 0)
+MoveLinRelWRF(0.07, 0.84, 0, 0, 0, 0)
+MoveLinRelWRF(0.29, 0.920, 0, 0, 0, 0)
+MoveLinRelWRF(0.53, 0.78, 0, 0, 0, 0)
+MoveLinRelWRF(0.71, 0.570, 0, 0, 0, 0)
+MoveLinRelWRF(0.47, 0.24, 0, 0, 0, 0)
+MoveLinRelWRF(0.6, 0.210, 0, 0, 0, 0)
+MoveLinRelWRF(0.79, 0.11, 0, 0, 0, 0)
+MoveLinRelWRF(0.97, 0.050, 0, 0, 0, 0)
+MoveLinRelWRF(0.97, 0.02, 0, 0, 0, 0)
+MoveLinRelWRF(5.16, 0.010, 0, 0, 0, 0)
+
+//Sharpie up
+
+MoveLinRelWRF(0, 0, 2.1, 0, 0, 0) //Bring Sharpie up
+
+//i
+MoveLinRelWRF(0, 4.22, 0, 0, 0, 0)
+
+MoveLinRelWRF(0, 0, -2, 0, 0, 0)//Lower Sharpie onto page
+
+MoveLinRelWRF(-10.96, 0, 0, 0, 0, 0)
+
+//Sharpie up
+MoveLinRelWRF(0, 0, 2, 0, 0, 0) //Bring Sharpie up
+
+//i dot 1
+MoveLinRelWRF(-3.06, 0.01, 0, 0, 0, 0)//Move to next point
+
+MoveLinRelWRF(0, 0, -2.7, 0, 0, 0)//Lower Sharpie onto page
+
+//Sharpie up
+MoveLinRelWRF(0, 0, 2.2, 0, 0, 0) //Bring Sharpie up
+
+//Small Circle
+MoveLinRelWRF(-3, 18.846153, 0, 0, 0, 0)//Move to next point
+
+MoveLinRelWRF(0, 0, -1.6, 0, 0, 0)//Lower Sharpie onto page
+
+MoveLinRelWRF(-0.332779, 0.213342, 0, 0, 0, 0)
+MoveLinRelWRF(-0.400959, 0.276666, 0, 0, 0, 0)
+MoveLinRelWRF(-0.351163, 0.261194, 0, 0, 0, 0)
+MoveLinRelWRF(-0.468065, 0.378083, 0, 0, 0, 0)
+MoveLinRelWRF(-0.443702, 0.393378, 0, 0, 0, 0)
+MoveLinRelWRF(-0.464907, 0.453604, 0, 0, 0, 0)
+MoveLinRelWRF(-0.42495, 0.457284, 0, 0, 0, 0)
+MoveLinRelWRF(-0.598696, 0.727507, 0, 0, 0, 0)
+MoveLinRelWRF(-0.358512, 0.492788, 0, 0, 0, 0)
+MoveLinRelWRF(-0.35862, 0.546875, 0, 0, 0, 0)
+MoveLinRelWRF(-0.292954, 0.496411, 0, 0, 0, 0)
+MoveLinRelWRF(-0.27437, 0.51621, 0, 0, 0, 0)
+MoveLinRelWRF(-0.189798, 0.393629, 0, 0, 0, 0)
+MoveLinRelWRF(-0.119824, 0.267428, 0, 0, 0, 0)
+MoveLinRelWRF(-0.250144, 0.618461, 0, 0, 0, 0)
+MoveLinRelWRF(-0.233622, 0.679616, 0, 0, 0, 0)
+MoveLinRelWRF(-0.162567, 0.5633, 0, 0, 0, 0)
+MoveLinRelWRF(-0.11359, 0.464, 0, 0, 0, 0)
+MoveLinRelWRF(-0.126008, 0.631354, 0, 0, 0, 0)
+MoveLinRelWRF(-0.098553, 0.668913, 0, 0, 0, 0)
+MoveLinRelWRF(-0.061668, 0.644188, 0, 0, 0, 0)
+MoveLinRelWRF(-0.027614, 0.564904, 0, 0, 0, 0)
+MoveLinRelWRF(-0.002588, 0.591947, 0, 0, 0, 0)
+MoveLinRelWRF(0.016418, 0.456731, 0, 0, 0, 0)
+MoveLinRelWRF(0.026813, 0.390625, 0, 0, 0, 0)
+MoveLinRelWRF(0.08368, 0.742187, 0, 0, 0, 0)
+MoveLinRelWRF(0.112422, 0.667068, 0, 0, 0, 0)
+MoveLinRelWRF(0.174504, 0.768657, 0, 0, 0, 0)
+MoveLinRelWRF(0.189428, 0.659067, 0, 0, 0, 0)
+MoveLinRelWRF(0.222945, 0.645684, 0, 0, 0, 0)
+MoveLinRelWRF(0.250144, 0.618461, 0, 0, 0, 0)
+MoveLinRelWRF(0.227453, 0.494772, 0, 0, 0, 0)
+MoveLinRelWRF(0.292512, 0.566926, 0, 0, 0, 0)
+MoveLinRelWRF(0.418196, 0.709681, 0, 0, 0, 0)
+MoveLinRelWRF(0.379508, 0.566385, 0, 0, 0, 0)
+MoveLinRelWRF(0.495155, 0.65398, 0, 0, 0, 0)
+MoveLinRelWRF(0.444545, 0.521501, 0, 0, 0, 0)
+MoveLinRelWRF(0.360355, 0.384887, 0, 0, 0, 0)
+MoveLinRelWRF(0.464907, 0.453604, 0, 0, 0, 0)
+MoveLinRelWRF(0.419647, 0.372961, 0, 0, 0, 0)
+MoveLinRelWRF(0.49212, 0.3985, 0, 0, 0, 0)
+MoveLinRelWRF(0.51002, 0.373465, 0, 0, 0, 0)
+MoveLinRelWRF(0.574881, 0.377737, 0, 0, 0, 0)
+MoveLinRelWRF(0.367366, 0.219442, 0, 0, 0, 0)
+MoveLinRelWRF(0.561221, 0.304764, 0, 0, 0, 0)
+MoveLinRelWRF(0.550728, 0.26566, 0, 0, 0, 0)
+MoveLinRelWRF(0.524993, 0.224457, 0, 0, 0, 0)
+MoveLinRelWRF(0.808293, 0.294165, 0, 0, 0, 0)
+MoveLinRelWRF(0.712139, 0.210536, 0, 0, 0, 0)
+MoveLinRelWRF(0.691106, 0.163009, 0, 0, 0, 0)
+MoveLinRelWRF(0.625, 0.113694, 0, 0, 0, 0)
+MoveLinRelWRF(0.730168, 0.09342, 0, 0, 0, 0)
+MoveLinRelWRF(0.537861, 0.042169, 0, 0, 0, 0)
+MoveLinRelWRF(0.748089, 0.021517, 0, 0, 0, 0)
+MoveLinRelWRF(0.784363, -0.023657, 0, 0, 0, 0)
+MoveLinRelWRF(0.591947, -0.049319, 0, 0, 0, 0)
+MoveLinRelWRF(0.904447, -0.128425, 0, 0, 0, 0)
+MoveLinRelWRF(0.745113, -0.155234, 0, 0, 0, 0)
+MoveLinRelWRF(1.018494, -0.28771, 0, 0, 0, 0)
+MoveLinRelWRF(0.808293, -0.294165, 0, 0, 0, 0)
+MoveLinRelWRF(0.524992, -0.224457, 0, 0, 0, 0)
+MoveLinRelWRF(0.725224, -0.356616, 0, 0, 0, 0)
+MoveLinRelWRF(0.591411, -0.33405, 0, 0, 0, 0)
+MoveLinRelWRF(0.538396, -0.341119, 0, 0, 0, 0)
+MoveLinRelWRF(0.709186, -0.509283, 0, 0, 0, 0)
+MoveLinRelWRF(0.796223, -0.665511, 0, 0, 0, 0)
+MoveLinRelWRF(0.580451, -0.559554, 0, 0, 0, 0)
+MoveLinRelWRF(0.533095, -0.580969, 0, 0, 0, 0)
+MoveLinRelWRF(0.319745, -0.385112, 0, 0, 0, 0)
+MoveLinRelWRF(0.447215, -0.594287, 0, 0, 0, 0)
+MoveLinRelWRF(0.421419, -0.63307, 0, 0, 0, 0)
+MoveLinRelWRF(0.376285, -0.642996, 0, 0, 0, 0)
+MoveLinRelWRF(0.340014, -0.665868, 0, 0, 0, 0)
+MoveLinRelWRF(0.327153, -0.748618, 0, 0, 0, 0)
+MoveLinRelWRF(0.289679, -0.798622, 0, 0, 0, 0)
+MoveLinRelWRF(0.248505, -0.861373, 0, 0, 0, 0)
+MoveLinRelWRF(0.131249, -0.576923, 0, 0, 0, 0)
+MoveLinRelWRF(0.109202, -0.609976, 0, 0, 0, 0)
+MoveLinRelWRF(0.05982, -0.435697, 0, 0, 0, 0)
+MoveLinRelWRF(0.043553, -0.420007, 0, 0, 0, 0)
+MoveLinRelWRF(0.030726, -0.436363, 0, 0, 0, 0)
+MoveLinRelWRF(0.013818, -0.342548, 0, 0, 0, 0)
+MoveLinRelWRF(0.004796, -0.353284, 0, 0, 0, 0)
+MoveLinRelWRF(-0.005371, -0.37388, 0, 0, 0, 0)
+MoveLinRelWRF(-0.022523, -0.477764, 0, 0, 0, 0)
+MoveLinRelWRF(-0.058641, -0.646681, 0, 0, 0, 0)
+MoveLinRelWRF(-0.079781, -0.575675, 0, 0, 0, 0)
+MoveLinRelWRF(-0.085053, -0.471556, 0, 0, 0, 0)
+MoveLinRelWRF(-0.096072, -0.441593, 0, 0, 0, 0)
+MoveLinRelWRF(-0.084776, -0.339056, 0, 0, 0, 0)
+
+MoveLinRelWRF(-0.102191, -0.364982, 0, 0, 0, 0)
+MoveLinRelWRF(-0.107261, -0.344985, 0, 0, 0, 0)
+
+//Sharpie up
+MoveLinRelWRF(0, 0, 2, 0, 0, 0) //Bring Sharpie up
+
+//Move to Slot 1
+MovePose(70, -110, 172, 90, 0.0, -90.0) // Neutral Position
+MovePose(176, -158, 172, 90, 0.0, -90.0) // Move to pick position
+MovePose(173.8, -198, 172, 90, 0.0, -90.0) // Move to pick position
+MovePose(172.5, -194.8, 112, 90, 0.0, -90.0) // Move to pick position
+
+// Open gripper around the Marker 1
+Delay(1.0)
+GripperOpen() // Fully closes the gripper
+MoveGripper(30)//Ensure gripper isnt too wide to hit off things
+Delay(0.5) // Give it time to apply force
+
+//Bring the Marker 2 out of the fixture
+MoveLinRelWrf(0.0, 0.0, 80, 0.0, 0.0, 0.0)// Bring the nozzle up
+Delay(0.5)
+MovePose(70, -110, 172, 90, 0.0, -90.0) // Neutral Position
+MovePose(107.6, -158, 172, 90, 0.0, -90.0) // Move to drop position 1
+MovePose(107.6, -197, 172, 90, 0.0, -90.0) // Move to drop position 1
+MovePose(107.6, -195, 112, 90, 0.0, -90.0) // Move to drop position 1
+
+// Close gripper around the Marker 2
+Delay(1.0)
+
+GripperClose() // Fully closes the gripper
+Delay(0.5) // Give it time to apply force
+
+//Bring the Marker 2 to Board
+
+MoveLinRelWrf(0.0, 0.0, 70, 0.0, 0.0, 0.0)// Bring the nozzle up
+Delay(0.5)
+MoveLinRelWrf(0.0, 60.0, 0.0, 0.0, 0.0, 0.0)// Bring the nozzle out
+Delay(0.5)
+
+//V
+MovePose(67.380, 162.320, 118, -90, 0, 90)// Move to V Pose
+MovePose(67.380, 162.320, 113.8, -90, 0, 90)// Move to V Pose
+Delay(0.5)
+MoveLinRelWRF(0, 0, -2., 0, 0, 0)//Lower Sharpie onto page
+Delay(0.5)
+MoveLinRelWRF(14.5, 5.62, 0, 0, 0, 0)
+MoveLinRelWRF(-14.5, 5.63, 0, 0, 0, 0)
+
+//Sharpie up
+MoveLinRelWRF(0, 0, 2., 0, 0, 0) //Bring Sharpie up
+
+//i
+MoveLinRelWRF(4.04, 3.68, 0, 0, 0, 0)
+
+MoveLinRelWRF(0, 0, -2, 0, 0, 0)//Lower Sharpie onto page
+
+MoveLinRelWRF(10.96, 0, 0, 0, 0, 0)
+
+//Sharpie up
+MoveLinRelWRF(0, 0, 2, 0, 0, 0) //Bring Sharpie up
+
+//e
+MoveLinRelWRF(-5.96, 4.26, 0, 0, 0, 0)
+
+MoveLinRelWRF(0, 0, -2, 0, 0, 0)//Lower Sharpie onto page
+
+MoveLinRelWRF(0.02, 9.58, 0, 0, 0, 0)
+MoveLinRelWRF(-0.6, -0.09, 0, 0, 0, 0)
+MoveLinRelWRF(-0.53, -0.14, 0, 0, 0, 0)
+MoveLinRelWRF(-0.55, -0.21, 0, 0, 0, 0)
+MoveLinRelWRF(-0.51, -0.27, 0, 0, 0, 0)
+MoveLinRelWRF(-0.41, -0.28, 0, 0, 0, 0)
+MoveLinRelWRF(-0.46, -0.4, 0, 0, 0, 0)
+MoveLinRelWRF(-0.47, -0.51, 0, 0, 0, 0)
+MoveLinRelWRF(-0.42, -0.65, 0, 0, 0, 0)
+MoveLinRelWRF(-0.28, -0.68, 0, 0, 0, 0)
+MoveLinRelWRF(-0.17, -0.71, 0, 0, 0, 0)
+MoveLinRelWRF(-0.06, -0.86, 0, 0, 0, 0)
+MoveLinRelWRF(0.1, -1.11, 0, 0, 0, 0)
+MoveLinRelWRF(0.36, -1.04, 0, 0, 0, 0)
+MoveLinRelWRF(0.53, -0.83, 0, 0, 0, 0)
+MoveLinRelWRF(0.76, -0.72, 0, 0, 0, 0)
+MoveLinRelWRF(0.69, -0.46, 0, 0, 0, 0)
+MoveLinRelWRF(0.86, -0.39, 0, 0, 0, 0)
+MoveLinRelWRF(1.14, -0.23, 0, 0, 0, 0)
+MoveLinRelWRF(0.51, -0.03, 0, 0, 0, 0)
+MoveLinRelWRF(0.54, 0.03, 0, 0, 0, 0)
+MoveLinRelWRF(0.97, 0.19, 0, 0, 0, 0)
+MoveLinRelWRF(1.15, 0.51, 0, 0, 0, 0)
+MoveLinRelWRF(0.96, 0.72, 0, 0, 0, 0)
+MoveLinRelWRF(0.72, 0.93, 0, 0, 0, 0)
+MoveLinRelWRF(0.43, 1.16, 0, 0, 0, 0)
+MoveLinRelWRF(0.12, 1.23, 0, 0, 0, 0)
+MoveLinRelWRF(-0.08, 1.02, 0, 0, 0, 0)
+MoveLinRelWRF(-0.3, 1.04, 0, 0, 0, 0)
+MoveLinRelWRF(-0.47, 0.84, 0, 0, 0, 0)
+MoveLinRelWRF(-0.61, 0.69, 0, 0, 0, 0)
+MoveLinRelWRF(-0.66, 0.51, 0, 0, 0, 0)
+MoveLinRelWRF(-0.51, 0.3, 0, 0, 0, 0)
+
+//Sharpie up
+MoveLinRelWRF(0, 0, 2, 0, 0, 0) //Bring Sharpie up
+
+// I Dot -2
+MoveLinRelWRF(-10.83, -13.48, 0, 0, 0, 0)//Move to next point
+
+MoveLinRelWRF(0, 0, -2., 0, 0, 0)//Lower Sharpie onto page
+
+MoveLinRelWRF(-0.11, 0.34, 0, 0, 0, 0)
+MoveLinRelWRF(-0.29, 0.17, 0, 0, 0, 0)
+MoveLinRelWRF(-0.3, -0.17, 0, 0, 0, 0)
+MoveLinRelWRF(-0.11, -0.34, 0, 0, 0, 0)
+MoveLinRelWRF(0.11, -0.33, 0, 0, 0, 0)
+MoveLinRelWRF(0.3, -0.16, 0, 0, 0, 0)
+MoveLinRelWRF(0.29, 0.16, 0, 0, 0, 0)
+
+MoveLinRelWRF(0.11, 0.33, 0, 0, 0, 0)
+Delay(0.2)
+
+//Sharpie up
+MoveLinRelWRF(0, 0, 2., 0, 0, 0) //Bring Sharpie up
+
+// Big Circle
+MoveLinRelWRF(-3, -18.84615, 2, 0, 0, 0)
+
+MoveLinRelWRF(0, 0, -4, 0, 0, 0)//Lower Sharpie onto page
+
+MoveLinRelWRF(-0.39617, 0.201572, 0, 0, 0, 0)
+MoveLinRelWRF(-0.821838, 0.447125, 0, 0, 0, 0)
+MoveLinRelWRF(-0.604, 0.354698, 0, 0, 0, 0)
+MoveLinRelWRF(-0.79383, 0.501886, 0, 0, 0, 0)
+MoveLinRelWRF(-0.700361, 0.478666, 0, 0, 0, 0)
+MoveLinRelWRF(-0.656869, 0.48175, 0, 0, 0, 0)
+MoveLinRelWRF(-0.647776, 0.508538, 0, 0, 0, 0)
+MoveLinRelWRF(-0.80142, 0.679207, 0, 0, 0, 0)
+MoveLinRelWRF(-0.751661, 0.692559, 0, 0, 0, 0)
+MoveLinRelWRF(-0.735221, 0.735731, 0, 0, 0, 0)
+MoveLinRelWRF(-0.670937, 0.728276, 0, 0, 0, 0)
+MoveLinRelWRF(-0.666561, 0.784912, 0, 0, 0, 0)
+MoveLinRelWRF(-0.740957, 0.956197, 0, 0, 0, 0)
+MoveLinRelWRF(-0.699403, 0.999301, 0, 0, 0, 0)
+MoveLinRelWRF(-0.520259, 0.81728, 0, 0, 0, 0)
+MoveLinRelWRF(-0.42309, 0.720801, 0, 0, 0, 0)
+MoveLinRelWRF(-0.497705, 0.926318, 0, 0, 0, 0)
+MoveLinRelWRF(-0.578397, 1.212404, 0, 0, 0, 0)
+MoveLinRelWRF(-0.382478, 0.908312, 0, 0, 0, 0)
+MoveLinRelWRF(-0.40233, 1.082876, 0, 0, 0, 0)
+MoveLinRelWRF(-0.32235, 1.000812, 0, 0, 0, 0)
+MoveLinRelWRF(-0.313177, 1.14581, 0, 0, 0, 0)
+MoveLinRelWRF(-0.267139, 1.203738, 0, 0, 0, 0)
+MoveLinRelWRF(-0.227796, 1.358173, 0, 0, 0, 0)
+MoveLinRelWRF(-0.123545, 1.046053, 0, 0, 0, 0)
+MoveLinRelWRF(-0.087928, 1.217953, 0, 0, 0, 0)
+MoveLinRelWRF(-0.028368, 1.190636, 0, 0, 0, 0)
+MoveLinRelWRF(0.018998, 0.974461, 0, 0, 0, 0)
+MoveLinRelWRF(0.081778, 1.268013, 0, 0, 0, 0)
+MoveLinRelWRF(0.155603, 1.328693, 0, 0, 0, 0)
+MoveLinRelWRF(0.198077, 1.173967, 0, 0, 0, 0)
+MoveLinRelWRF(0.249783, 1.146897, 0, 0, 0, 0)
+MoveLinRelWRF(0.322854, 1.200202, 0, 0, 0, 0)
+MoveLinRelWRF(0.314736, 0.988051, 0, 0, 0, 0)
+MoveLinRelWRF(0.218505, 0.613512, 0, 0, 0, 0)
+MoveLinRelWRF(0.37138, 0.942292, 0, 0, 0, 0)
+MoveLinRelWRF(0.429004, 0.968765, 0, 0, 0, 0)
+MoveLinRelWRF(0.457279, 0.925922, 0, 0, 0, 0)
+MoveLinRelWRF(0.636696, 1.14991, 0, 0, 0, 0)
+MoveLinRelWRF(0.668186, 1.072345, 0, 0, 0, 0)
+MoveLinRelWRF(0.701319, 1.00966, 0, 0, 0, 0)
+MoveLinRelWRF(0.790724, 1.023974, 0, 0, 0, 0)
+MoveLinRelWRF(0.666561, 0.784911, 0, 0, 0, 0)
+MoveLinRelWRF(0.884195, 0.948042, 0, 0, 0, 0)
+MoveLinRelWRF(0.721344, 0.705256, 0, 0, 0, 0)
+MoveLinRelWRF(0.735716, 0.663888, 0, 0, 0, 0)
+MoveLinRelWRF(0.511726, 0.431818, 0, 0, 0, 0)
+MoveLinRelWRF(0.754034, 0.595307, 0, 0, 0, 0)
+MoveLinRelWRF(0.785638, 0.572394, 0, 0, 0, 0)
+MoveLinRelWRF(0.9924, 0.659267, 0, 0, 0, 0)
+MoveLinRelWRF(0.799411, 0.483392, 0, 0, 0, 0)
+MoveLinRelWRF(0.729718, 0.406703, 0, 0, 0, 0)
+MoveLinRelWRF(0.873192, 0.44591, 0, 0, 0, 0)
+MoveLinRelWRF(0.827805, 0.383948, 0, 0, 0, 0)
+MoveLinRelWRF(0.967548, 0.403455, 0, 0, 0, 0)
+MoveLinRelWRF(1.126803, 0.411446, 0, 0, 0, 0)
+MoveLinRelWRF(1.084735, 0.339562, 0, 0, 0, 0)
+MoveLinRelWRF(1.186899, 0.310788, 0, 0, 0, 0)
+MoveLinRelWRF(1.129874, 0.239004, 0, 0, 0, 0)
+MoveLinRelWRF(1.349974, 0.215109, 0, 0, 0, 0)
+MoveLinRelWRF(1.46872, 0.149059, 0, 0, 0, 0)
+MoveLinRelWRF(0.937249, 0.04957, 0, 0, 0, 0)
+MoveLinRelWRF(0.851536, 0.014507, 0, 0, 0, 0)
+MoveLinRelWRF(0.936325, -0.017541, 0, 0, 0, 0)
+MoveLinRelWRF(1.32512, -0.084952, 0, 0, 0, 0)
+MoveLinRelWRF(1.138822, -0.129823, 0, 0, 0, 0)
+MoveLinRelWRF(0.751202, -0.114788, 0, 0, 0, 0)
+MoveLinRelWRF(0.567909, -0.102388, 0, 0, 0, 0)
+MoveLinRelWRF(0.670072, -0.138343, 0, 0, 0, 0)
+MoveLinRelWRF(0.885316, -0.212428, 0, 0, 0, 0)
+MoveLinRelWRF(0.773618, -0.213902, 0, 0, 0, 0)
+MoveLinRelWRF(0.751948, -0.233892, 0, 0, 0, 0)
+MoveLinRelWRF(0.291343, -0.097667, 0, 0, 0, 0)
+
+//Sharpie up
+
+MoveLinRelWRF(0, 0,4, 0, 0, 0) //Bring Sharpie up
+
+//Bring back Marker 2 to Slot 2
+MovePose(70, -110, 172, 90, 0.0, -90.0) // Neutral Position
+MovePose(107.6, -158, 172, 90, 0.0, -90.0) // Move to drop position 1
+MovePose(107.6, -194.8, 172, 90, 0.0, -90.0) // Move to drop position 1
+MovePose(107.6, -194.8, 112, 90, 0.0, -90.0) // Move to drop position 1
+
+// Open gripper around the Marker 2
+Delay(1.0)
+GripperOpen() // Fully closes the gripper
+MoveGripper(30)//Ensure gripper isnt too wide to hit off things
+
+Delay(0.5) // Give it time to apply force
+
+//Move Arm from the fixture
+MoveLinRelWrf(0.0, 0.0, 80, 0.0, 0.0, 0.0)// Bring the nozzle up
+Delay(0.5)
+MoveLinRelWrf(0.0, 60.0, 0.0, 0.0, 0.0, 0.0)// Bring the nozzle out
+Delay(0.5)
+
+MovePose(165, 0, 120, 0.0, 90.0, 0.0)//Move to Wait Position
