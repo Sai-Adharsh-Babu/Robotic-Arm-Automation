@@ -1,0 +1,354 @@
+SetTrf(0, 0, 0, 0, 0, 0)
+SetGripperForce(80) // 80% of 40 N = 32 N of force
+SetGripperVel(100) // 100% of nominal speed (~100 mm/s)
+SetCartLinVel(50) // Set linear speed to 50 mm/s
+SetCartAcc(100) // mm/s²
+MoveGripper(25)//Ensure gripper isnt too wide to hit off things
+
+//Move to Marker 1 / Slot 1
+MovePose(70, -110, 172, 90, 0.0, -90.0) // Neutral Position
+MovePose(176, -158, 172, 90, 0.0, -90.0) // Move to pick position
+MovePose(173.8, -194.8, 172, 90, 0.0, -90.0) // Move to pick position
+MovePose(174, -194.8, 112, 90, 0.0, -90.0) // Move to pick position
+
+// Close gripper around the Marker 1 in Slot 1
+Delay(1.0)
+GripperClose() // Fully closes the gripper
+Delay(0.5) // Give it time to apply force
+
+//Bring the Marker 1 up and out of the fixture
+MoveLinRelWrf(0.0, 0.0, 70, 0.0, 0.0, 0.0)// Bring the nozzle up
+Delay(0.5)
+MoveLinRelWrf(0.0, 60.0, 0.0, 0.0, 0.0, 0.0)// Bring the nozzle out
+Delay(0.5)
+
+//Move above origin
+
+MovePose(125, 119, 118, -90, 0.0, 90) //Move to origin //5mm above contact height
+MovePose(125, 119, 114.3, -90, 0.0, 90)//Move to origin //5mm above contact heigh
+
+MoveLinRelWRF(0, 0, -3.3, 0, 0, 0) //Lower Marker 1 onto page
+
+// T
+MoveLinRelWrf(0.000000,7,0,0,0,0)
+MoveLinRelWrf(0.088366,0.411003,0,0,0,0)
+MoveLinRelWrf(0.204527,0.296104,0,0,0,0)
+MoveLinRelWrf(0.275696,0.195049,0,0,0,0)
+MoveLinRelWrf(0.431411,0.097844,0,0,0,0)
+MoveLinRelWrf(17.696235,0.000000,0,0,0,0)
+MoveLinRelWRF(0, 0, 3.2, 0, 0, 0) //Lift Marker 1 from page
+MoveLinRelWrf(0.000000,3,0,0,0,0)
+MoveLinRelWRF(0, 0, -3.2, 0, 0, 0) //Lower Marker 1 onto page
+MoveLinRelWrf(-17.696235,0.000000,0,0,0,0)
+MoveLinRelWrf(-0.431411,0.105997,0,0,0,0)
+MoveLinRelWrf(-0.275696,0.195049,0,0,0,0)
+MoveLinRelWrf(-0.162271,0.212957,0,0,0,0)
+MoveLinRelWrf(-0.130622,0.494150,0,0,0,0)
+MoveLinRelWrf(0.000000,7,0,0,0,0)
+
+MoveLinRelWRF(0, 0, 3.3, 0, 0, 0) //Lift Sharpie from page
+
+// T-I
+MoveLinRelWrf(4.334615,3.205128,0,0,0,0)
+MoveLinRelWRF(0, 0, -3.2, 0, 0, 0) //Lower Marker 1 onto page
+
+// I
+MoveLinRelWrf(14.361620,0.000000,0,0,0,0)
+
+MoveLinRelWRF(0, 0, 3.2, 0, 0, 0) //Lift Marker 1 from page
+
+// I-V
+MoveLinRelWrf(-14.361620,3.926328,0,0,0,0)
+
+MoveLinRelWRF(0, 0, -3.2, 0, 0, 0) //Lower Marker 1 onto page
+
+// V
+MoveLinRelWrf(14.361620,6.586237,0,0,0,0)
+MoveLinRelWrf(-14.361620,6.603956,0,0,0,0)
+
+MoveLinRelWRF(0, 0, 3.2, 0, 0, 0) //Lift Marker 1 from page
+
+// V-U
+MoveLinRelWrf(0.000000,4.000000,0,0,0,0)
+
+MoveLinRelWRF(0, 0, -3.2, 0, 0, 0) //Lower Marker 1 onto page
+
+// U
+MoveLinRelWrf(12.361620,0.000000,0,0,0,0)
+MoveLinRelWrf(0.781084,0.158829,0,0,0,0)
+MoveLinRelWrf(0.633130,0.426957,0,0,0,0)
+MoveLinRelWrf(0.422885,0.623602,0,0,0,0)
+MoveLinRelWrf(0.162901,0.790612,0,0,0,0)
+MoveLinRelWrf(0.000000,9.600000,0,0,0,0)
+MoveLinRelWrf(-0.284692,1.028453,0,0,0,0)
+MoveLinRelWrf(-0.372010,0.453286,0,0,0,0)
+MoveLinRelWrf(-0.562214,0.359431,0,0,0,0)
+MoveLinRelWrf(-0.781084,0.158830,0,0,0,0)
+MoveLinRelWrf(-12.361620,0.000000,0,0,0,0)
+
+MoveLinRelWRF(0, 0, 3.2, 0, 0, 0) //Lift Marker 1 from page
+
+// U-S
+MoveLinRelWrf(0.000000,17.600000,0,0,0,0)
+
+MoveLinRelWRF(0, 0, -3.4, 0, 0, 0) //Lower Marker 1 onto page
+
+// S
+MoveLinRelWrf(0.000000,-10.600000,0,0,0,0)
+MoveLinRelWrf(0.327967,-1.363906,0,0,0,0)
+MoveLinRelWrf(0.550713,-0.757415,0,0,0,0)
+MoveLinRelWrf(0.966192,-0.647376,0,0,0,0)
+MoveLinRelWrf(1.155128,-0.231303,0,0,0,0)
+MoveLinRelWrf(1.180810,0.000000,0,0,0,0)
+MoveLinRelWrf(1.250405,0.273007,0,0,0,0)
+MoveLinRelWrf(0.870915,0.605672,0,0,0,0)
+MoveLinRelWrf(0.607401,0.874692,0,0,0,0)
+MoveLinRelWrf(0.271279,1.246629,0,0,0,0)
+MoveLinRelWrf(0.000000,7.599999,0,0,0,0)
+MoveLinRelWrf(0.319355,1.346900,0,0,0,0)
+MoveLinRelWrf(0.559325,0.774420,0,0,0,0)
+MoveLinRelWrf(0.980292,0.653217,0,0,0,0)
+MoveLinRelWrf(1.141028,0.225463,0,0,0,0)
+MoveLinRelWrf(1.180810,0.000000,0,0,0,0)
+MoveLinRelWrf(1.141027,-0.225463,0,0,0,0)
+MoveLinRelWrf(0.980293,-0.653217,0,0,0,0)
+MoveLinRelWrf(0.559325,-0.774420,0,0,0,0)
+MoveLinRelWrf(0.319355,-1.346900,0,0,0,0)
+MoveLinRelWrf(0.000000,-10.600000,0,0,0,0)
+
+MoveLinRelWRF(0, 0, 3.2, 0, 0, 0) //Lift Marker 1 from page
+
+//Small Circle
+MovePose( 120, 190.093414, 114.1, -90, 0, 90 )
+
+MoveLinRelWRF(0, 0, -3.5, 0, 0, 0) //Lower Marker 1 onto page
+
+MoveLinRelWRF(-0.332779, 0.213342, 0, 0, 0, 0)
+MoveLinRelWRF(-0.400959, 0.276666, 0, 0, 0, 0)
+MoveLinRelWRF(-0.351163, 0.261194, 0, 0, 0, 0)
+MoveLinRelWRF(-0.468065, 0.378083, 0, 0, 0, 0)
+MoveLinRelWRF(-0.443702, 0.393378, 0, 0, 0, 0)
+MoveLinRelWRF(-0.464907, 0.453604, 0, 0, 0, 0)
+MoveLinRelWRF(-0.42495, 0.457284, 0, 0, 0, 0)
+MoveLinRelWRF(-0.598696, 0.727507, 0, 0, 0, 0)
+MoveLinRelWRF(-0.358512, 0.492788, 0, 0, 0, 0)
+MoveLinRelWRF(-0.35862, 0.546875, 0, 0, 0, 0)
+MoveLinRelWRF(-0.292954, 0.496411, 0, 0, 0, 0)
+MoveLinRelWRF(-0.27437, 0.51621, 0, 0, 0, 0)
+MoveLinRelWRF(-0.189798, 0.393629, 0, 0, 0, 0)
+MoveLinRelWRF(-0.119824, 0.267428, 0, 0, 0, 0)
+MoveLinRelWRF(-0.250144, 0.618461, 0, 0, 0, 0)
+MoveLinRelWRF(-0.233622, 0.679616, 0, 0, 0, 0)
+MoveLinRelWRF(-0.162567, 0.5633, 0, 0, 0, 0)
+MoveLinRelWRF(-0.11359, 0.464, 0, 0, 0, 0)
+MoveLinRelWRF(-0.126008, 0.631354, 0, 0, 0, 0)
+MoveLinRelWRF(-0.098553, 0.668913, 0, 0, 0, 0)
+MoveLinRelWRF(-0.061668, 0.644188, 0, 0, 0, 0)
+MoveLinRelWRF(-0.027614, 0.564904, 0, 0, 0, 0)
+MoveLinRelWRF(-0.002588, 0.591947, 0, 0, 0, 0)
+MoveLinRelWRF(0.016418, 0.456731, 0, 0, 0, 0)
+MoveLinRelWRF(0.026813, 0.390625, 0, 0, 0, 0)
+MoveLinRelWRF(0.08368, 0.742187, 0, 0, 0, 0)
+MoveLinRelWRF(0.112422, 0.667068, 0, 0, 0, 0)
+MoveLinRelWRF(0.174504, 0.768657, 0, 0, 0, 0)
+MoveLinRelWRF(0.189428, 0.659067, 0, 0, 0, 0)
+MoveLinRelWRF(0.222945, 0.645684, 0, 0, 0, 0)
+MoveLinRelWRF(0.250144, 0.618461, 0, 0, 0, 0)
+MoveLinRelWRF(0.227453, 0.494772, 0, 0, 0, 0)
+MoveLinRelWRF(0.292512, 0.566926, 0, 0, 0, 0)
+MoveLinRelWRF(0.418196, 0.709681, 0, 0, 0, 0)
+MoveLinRelWRF(0.379508, 0.566385, 0, 0, 0, 0)
+MoveLinRelWRF(0.495155, 0.65398, 0, 0, 0, 0)
+MoveLinRelWRF(0.444545, 0.521501, 0, 0, 0, 0)
+MoveLinRelWRF(0.360355, 0.384887, 0, 0, 0, 0)
+MoveLinRelWRF(0.464907, 0.453604, 0, 0, 0, 0)
+MoveLinRelWRF(0.419647, 0.372961, 0, 0, 0, 0)
+MoveLinRelWRF(0.49212, 0.3985, 0, 0, 0, 0)
+MoveLinRelWRF(0.51002, 0.373465, 0, 0, 0, 0)
+MoveLinRelWRF(0.574881, 0.377737, 0, 0, 0, 0)
+MoveLinRelWRF(0.367366, 0.219442, 0, 0, 0, 0)
+MoveLinRelWRF(0.561221, 0.304764, 0, 0, 0, 0)
+MoveLinRelWRF(0.550728, 0.26566, 0, 0, 0, 0)
+MoveLinRelWRF(0.524993, 0.224457, 0, 0, 0, 0)
+MoveLinRelWRF(0.808293, 0.294165, 0, 0, 0, 0)
+MoveLinRelWRF(0.712139, 0.210536, 0, 0, 0, 0)
+MoveLinRelWRF(0.691106, 0.163009, 0, 0, 0, 0)
+MoveLinRelWRF(0.625, 0.113694, 0, 0, 0, 0)
+MoveLinRelWRF(0.730168, 0.09342, 0, 0, 0, 0)
+MoveLinRelWRF(0.537861, 0.042169, 0, 0, 0, 0)
+MoveLinRelWRF(0.748089, 0.021517, 0, 0, 0, 0)
+MoveLinRelWRF(0.784363, -0.023657, 0, 0, 0, 0)
+MoveLinRelWRF(0.591947, -0.049319, 0, 0, 0, 0)
+MoveLinRelWRF(0.904447, -0.128425, 0, 0, 0, 0)
+MoveLinRelWRF(0.745113, -0.155234, 0, 0, 0, 0)
+MoveLinRelWRF(1.018494, -0.28771, 0, 0, 0, 0)
+MoveLinRelWRF(0.808293, -0.294165, 0, 0, 0, 0)
+MoveLinRelWRF(0.524992, -0.224457, 0, 0, 0, 0)
+MoveLinRelWRF(0.725224, -0.356616, 0, 0, 0, 0)
+MoveLinRelWRF(0.591411, -0.33405, 0, 0, 0, 0)
+MoveLinRelWRF(0.538396, -0.341119, 0, 0, 0, 0)
+MoveLinRelWRF(0.709186, -0.509283, 0, 0, 0, 0)
+MoveLinRelWRF(0.796223, -0.665511, 0, 0, 0, 0)
+MoveLinRelWRF(0.580451, -0.559554, 0, 0, 0, 0)
+MoveLinRelWRF(0.533095, -0.580969, 0, 0, 0, 0)
+MoveLinRelWRF(0.319745, -0.385112, 0, 0, 0, 0)
+MoveLinRelWRF(0.447215, -0.594287, 0, 0, 0, 0)
+MoveLinRelWRF(0.421419, -0.63307, 0, 0, 0, 0)
+MoveLinRelWRF(0.376285, -0.642996, 0, 0, 0, 0)
+MoveLinRelWRF(0.340014, -0.665868, 0, 0, 0, 0)
+MoveLinRelWRF(0.327153, -0.748618, 0, 0, 0, 0)
+MoveLinRelWRF(0.289679, -0.798622, 0, 0, 0, 0)
+MoveLinRelWRF(0.248505, -0.861373, 0, 0, 0, 0)
+MoveLinRelWRF(0.131249, -0.576923, 0, 0, 0, 0)
+MoveLinRelWRF(0.109202, -0.609976, 0, 0, 0, 0)
+MoveLinRelWRF(0.05982, -0.435697, 0, 0, 0, 0)
+MoveLinRelWRF(0.043553, -0.420007, 0, 0, 0, 0)
+MoveLinRelWRF(0.030726, -0.436363, 0, 0, 0, 0)
+MoveLinRelWRF(0.013818, -0.342548, 0, 0, 0, 0)
+MoveLinRelWRF(0.004796, -0.353284, 0, 0, 0, 0)
+MoveLinRelWRF(-0.005371, -0.37388, 0, 0, 0, 0)
+MoveLinRelWRF(-0.022523, -0.477764, 0, 0, 0, 0)
+MoveLinRelWRF(-0.058641, -0.646681, 0, 0, 0, 0)
+MoveLinRelWRF(-0.079781, -0.575675, 0, 0, 0, 0)
+MoveLinRelWRF(-0.085053, -0.471556, 0, 0, 0, 0)
+MoveLinRelWRF(-0.096072, -0.441593, 0, 0, 0, 0)
+MoveLinRelWRF(-0.084776, -0.339056, 0, 0, 0, 0)
+MoveLinRelWRF(-0.102191, -0.364982, 0, 0, 0, 0)
+MoveLinRelWRF(-0.107261, -0.344985, 0, 0, 0, 0)
+
+//Sharpie up
+MoveLinRelWRF(0, 0, 3.2, 0, 0, 0) //Lift Marker 1 from page
+
+//Move to Slot 1
+MovePose(70, -110, 172, 90, 0.0, -90.0) // Neutral Position
+MovePose(176, -158, 172, 90, 0.0, -90.0) // Move to pick position
+MovePose(173.8, -198, 172, 90, 0.0, -90.0) // Move to pick position
+MovePose(172.5, -194.8, 112, 90, 0.0, -90.0) // Move to pick position
+
+// Open gripper around the Marker 1
+Delay(1.0)
+GripperOpen() // Fully closes the gripper
+MoveGripper(30)//Ensure gripper isnt too wide to hit off things
+Delay(0.5) // Give it time to apply force
+
+//Bring the Marker 2 out of the fixture
+MoveLinRelWrf(0.0, 0.0, 80, 0.0, 0.0, 0.0)// Bring the nozzle up
+Delay(0.5)
+MovePose(70, -110, 172, 90, 0.0, -90.0) // Neutral Position
+MovePose(107.6, -158, 172, 90, 0.0, -90.0) // Move to drop position 1
+MovePose(107.6, -197, 172, 90, 0.0, -90.0) // Move to drop position 1
+MovePose(107.6, -195, 112, 90, 0.0, -90.0) // Move to drop position 1
+
+// Close gripper around the Marker 2
+Delay(1.0)
+GripperClose() // Fully closes the gripper
+Delay(0.5) // Give it time to apply force
+
+//Bring the Marker 2 to Board
+MoveLinRelWrf(0.0, 0.0, 70, 0.0, 0.0, 0.0)// Bring the nozzle up
+Delay(0.5)
+MoveLinRelWrf(0.0, 60.0, 0.0, 0.0, 0.0, 0.0)// Bring the nozzle out
+Delay(0.5)
+
+//Bring Marker to Board for circle 2
+MovePose( 120, 175, 114.1, -90, 0, 90)
+
+MoveLinRelWRF(0, 0, -2.8, 0, 0, 0) //Lower Marker 2 onto page
+
+MoveLinRelWRF(-0.39617, 0.201572, 0, 0, 0, 0)
+MoveLinRelWRF(-0.821838, 0.447125, 0, 0, 0, 0)
+MoveLinRelWRF(-0.604, 0.354698, 0, 0, 0, 0)
+MoveLinRelWRF(-0.79383, 0.501886, 0, 0, 0, 0)
+MoveLinRelWRF(-0.700361, 0.478666, 0, 0, 0, 0)
+MoveLinRelWRF(-0.656869, 0.48175, 0, 0, 0, 0)
+MoveLinRelWRF(-0.647776, 0.508538, 0, 0, 0, 0)
+MoveLinRelWRF(-0.80142, 0.679207, 0, 0, 0, 0)
+MoveLinRelWRF(-0.751661, 0.692559, 0, 0, 0, 0)
+MoveLinRelWRF(-0.735221, 0.735731, 0, 0, 0, 0)
+MoveLinRelWRF(-0.670937, 0.728276, 0, 0, 0, 0)
+MoveLinRelWRF(-0.666561, 0.784912, 0, 0, 0, 0)
+MoveLinRelWRF(-0.740957, 0.956197, 0, 0, 0, 0)
+MoveLinRelWRF(-0.699403, 0.999301, 0, 0, 0, 0)
+MoveLinRelWRF(-0.520259, 0.81728, 0, 0, 0, 0)
+MoveLinRelWRF(-0.42309, 0.720801, 0, 0, 0, 0)
+MoveLinRelWRF(-0.497705, 0.926318, 0, 0, 0, 0)
+MoveLinRelWRF(-0.578397, 1.212404, 0, 0, 0, 0)
+MoveLinRelWRF(-0.382478, 0.908312, 0, 0, 0, 0)
+MoveLinRelWRF(-0.40233, 1.082876, 0, 0, 0, 0)
+MoveLinRelWRF(-0.32235, 1.000812, 0, 0, 0, 0)
+MoveLinRelWRF(-0.313177, 1.14581, 0, 0, 0, 0)
+MoveLinRelWRF(-0.267139, 1.203738, 0, 0, 0, 0)
+MoveLinRelWRF(-0.227796, 1.358173, 0, 0, 0, 0)
+MoveLinRelWRF(-0.123545, 1.046053, 0, 0, 0, 0)
+MoveLinRelWRF(-0.087928, 1.217953, 0, 0, 0, 0)
+MoveLinRelWRF(-0.028368, 1.190636, 0, 0, 0, 0)
+MoveLinRelWRF(0.018998, 0.974461, -0.1, 0, 0, 0)
+MoveLinRelWRF(0.081778, 1.268013, 0, 0, 0, 0)
+MoveLinRelWRF(0.155603, 1.328693, 0, 0, 0, 0)
+MoveLinRelWRF(0.198077, 1.173967, 0, 0, 0, 0)
+MoveLinRelWRF(0.249783, 1.146897, 0, 0, 0, 0)
+MoveLinRelWRF(0.322854, 1.200202, 0, 0, 0, 0)
+MoveLinRelWRF(0.314736, 0.988051, 0, 0, 0, 0)
+MoveLinRelWRF(0.218505, 0.613512, 0, 0, 0, 0)
+MoveLinRelWRF(0.37138, 0.942292, 0, 0, 0, 0)
+MoveLinRelWRF(0.429004, 0.968765, 0, 0, 0, 0)
+MoveLinRelWRF(0.457279, 0.925922, 0, 0, 0, 0)
+MoveLinRelWRF(0.636696, 1.14991, 0, 0, 0, 0)
+MoveLinRelWRF(0.668186, 1.072345, 0, 0, 0, 0)
+MoveLinRelWRF(0.701319, 1.00966, 0, 0, 0, 0)
+MoveLinRelWRF(0.790724, 1.023974, 0, 0, 0, 0)
+MoveLinRelWRF(0.666561, 0.784911, 0, 0, 0, 0)
+MoveLinRelWRF(0.884195, 0.948042, 0, 0, 0, 0)
+MoveLinRelWRF(0.721344, 0.705256, 0, 0, 0, 0)
+MoveLinRelWRF(0.735716, 0.663888, 0, 0, 0, 0)
+MoveLinRelWRF(0.511726, 0.431818, 0, 0, 0, 0)
+MoveLinRelWRF(0.754034, 0.595307, 0, 0, 0, 0)
+MoveLinRelWRF(0.785638, 0.572394, 0, 0, 0, 0)
+MoveLinRelWRF(0.9924, 0.659267, 0, 0, 0, 0)
+MoveLinRelWRF(0.799411, 0.483392, 0, 0, 0, 0)
+MoveLinRelWRF(0.729718, 0.406703, 0, 0, 0, 0)
+MoveLinRelWRF(0.873192, 0.44591, 0, 0, 0, 0)
+MoveLinRelWRF(0.827805, 0.383948, 0, 0, 0, 0)
+MoveLinRelWRF(0.967548, 0.403455, 0, 0, 0, 0)
+MoveLinRelWRF(1.126803, 0.411446, 0, 0, 0, 0)
+MoveLinRelWRF(1.084735, 0.339562, 0, 0, 0, 0)
+MoveLinRelWRF(1.186899, 0.310788, 0, 0, 0, 0)
+MoveLinRelWRF(1.129874, 0.239004, 0, 0, 0, 0)
+MoveLinRelWRF(1.349974, 0.215109, 0, 0, 0, 0)
+MoveLinRelWRF(1.46872, 0.149059, 0, 0, 0, 0)
+MoveLinRelWRF(0.937249, 0.04957, 0, 0, 0, 0)
+MoveLinRelWRF(0.851536, 0.014507, 0, 0, 0, 0)
+MoveLinRelWRF(0.936325, -0.017541, 0, 0, 0, 0)
+MoveLinRelWRF(1.32512, -0.084952, 0, 0, 0, 0)
+MoveLinRelWRF(1.138822, -0.129823, 0, 0, 0, 0)
+MoveLinRelWRF(0.751202, -0.114788, 0, 0, 0, 0)
+MoveLinRelWRF(0.567909, -0.102388, 0, 0, 0, 0)
+MoveLinRelWRF(0.670072, -0.138343, 0, 0, 0, 0)
+MoveLinRelWRF(0.885316, -0.212428, 0, 0, 0, 0)
+MoveLinRelWRF(0.773618, -0.213902, 0, 0, 0, 0)
+MoveLinRelWRF(0.751948, -0.233892, 0, 0, 0, 0)
+MoveLinRelWRF(0.291343, -0.097667, 0, 0, 0, 0)
+
+//Sharpie up
+MoveLinRelWRF(0, 0,4, 0, 0, 0) //Lift Matker 2 up
+
+//Bring back Marker 2 to Slot 2
+MovePose(70, -110, 172, 90, 0.0, -90.0) // Neutral Position
+MovePose(107.6, -158, 172, 90, 0.0, -90.0) // Move to drop position 1
+MovePose(107.6, -194.8, 172, 90, 0.0, -90.0) // Move to drop position 1
+MovePose(107.6, -194.8, 112, 90, 0.0, -90.0) // Move to drop position 1
+
+// Open gripper around the Marker 2
+Delay(1.0)
+GripperOpen() // Fully closes the gripper
+MoveGripper(30)//Ensure gripper isnt too wide to hit off things
+
+Delay(0.5) // Give it time to apply force
+
+//Move Arm from the fixture
+MoveLinRelWrf(0.0, 0.0, 80, 0.0, 0.0, 0.0)// Bring the nozzle up
+Delay(0.5)
+MoveLinRelWrf(0.0, 60.0, 0.0, 0.0, 0.0, 0.0)// Bring the nozzle out
+Delay(0.5)
+
+MovePose(165, 0, 120, 0.0, 90.0, 0.0)//Move to Wait Position
