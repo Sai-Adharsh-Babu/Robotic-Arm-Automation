@@ -44,6 +44,9 @@ The `media/` folder contains short demonstration clips showing the robotic arm e
 - Controlled gluing and adhesive application  
 - Automated soldering and contact testing  
 
+## License  
+This project is licensed under the terms specified in the **[LICENSE](./LICENSE)** file.  
+
 ## Acknowledgment
 Developed as part of an **internship at Boston Scientific** under the **Process Engineering & R&D Team**.  
 This ongoing project explores the potential for robotic automation in biomedical manufacturing and aims to bridge design, coding, and real-world system integration.
