@@ -1,9 +1,9 @@
 # Robotic-Arm-Automation - Proof of Concept
 
 ## Overview
-This project demonstrates a proof-of-concept robotic arm automation developed during the early pre-production phase at **Boston Scientific, Galway**.  
-The goal was to explore precision automation techniques for handling and assembly tasks in biomedical device manufacturing.  
-The system was programmed to perform a range of controlled demonstrations, showcasing flexibility in motion planning, tool integration, and process reliability.
+This repository documents an **ongoing proof-of-concept project** developed during the early pre-production phase at **Boston Scientific, Galway**.  
+The project explores robotic automation methods for biomedical device manufacturing, focusing on **precision motion control, modular tooling, and process integration**.  
+It demonstrates programmable task sequences for nozzle handling, gluing, soldering, and testing—serving as a foundation for future vision-assisted and sensor-integrated automation.
 
 ## Key Features
 - **Web-based robotic arm control interface** connected to a laptop for code upload and command execution.  
@@ -28,19 +28,22 @@ The system was programmed to perform a range of controlled demonstrations, showc
 | `robotic_arm_electrical_tester_demo.py` | Probe movement demonstration for automated contact testing. |
 | `robotic_arm_soldering_demo.py` | Automated soldering sequence managing tip positioning and heating intervals. |
 
+> **Confidentiality Note:**  
+> This repository contains only non-confidential, internship-approved content.  
+> No proprietary design files, device data, or production details have been disclosed.  
+> All shared CAD models, code samples, and media were cleared for educational and demonstrative use.
+
 ## Repository Contents
 - **src/** – Python codes for robotic arm task sequences (writing, gluing, soldering, testing)
 - **models/** – SolidWorks 3D models and assemblies for automation
 - **media/** – Demonstration videos showing working sequences
 
+## Media Description
+The `media/` folder contains short demonstration clips showing the robotic arm executing programmed movements for:
+- Text writing sequences  
+- Controlled gluing and adhesive application  
+- Automated soldering and contact testing  
 
-## Confidentiality Statement
-
-This project was completed as part of an internship at Boston Scientific within the Process Engineering & R&D Team.
-All data and files included in this repository have been reviewed and approved for external sharing.
-No confidential production details, proprietary device information, or intellectual property have been disclosed.
-
-## Acknowlwdgement
-
-Developed during the Boston Scientific Internship Program (2025–2026).
-This project served as an exploratory stage in automation feasibility, combining elements of mechanical design, programming, and pre-production testing for biomedical device manufacturing.
+## Acknowledgment
+Developed as part of an **internship at Boston Scientific** under the **Process Engineering & R&D Team**.  
+This ongoing project explores the potential for robotic automation in biomedical manufacturing and aims to bridge design, coding, and real-world system integration.
