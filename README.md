@@ -28,7 +28,7 @@ The system was programmed to perform a range of controlled demonstrations, showc
 | `robotic_arm_electrical_tester_demo.py` | Probe movement demonstration for automated contact testing. |
 | `robotic_arm_soldering_demo.py` | Automated soldering sequence managing tip positioning and heating intervals. |
 
-### Repository Contents
+## Repository Contents
 - **src/** – Python codes for robotic arm task sequences (writing, gluing, soldering, testing)
 - **models/** – SolidWorks 3D models and assemblies for automation
 - **media/** – Demonstration videos showing working sequences
