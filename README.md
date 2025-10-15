@@ -33,10 +33,35 @@ It demonstrates programmable task sequences for nozzle handling, gluing, solderi
 > No proprietary design files, device data, or production details have been disclosed.  
 > All shared CAD models, code samples, and media were cleared for educational and demonstrative use.
 
-## Repository Contents
-- **src/** – Python codes for robotic arm task sequences (writing, gluing, soldering, testing)
-- **models/** – SolidWorks 3D models and assemblies for automation
-- **media/** – Demonstration videos showing working sequences
+## Repository Structure  
+```
+Robotic-Arm-Automation/
+│
+├── src/                        # Source codes for robotic arm task sequences
+│   ├── robotic_arm_text_writing_sequence_A.py
+│   ├── robotic_arm_text_writing_sequence_B.py
+│   ├── robotic_arm_gluing_demo.py
+│   ├── robotic_arm_electrical_tester_demo.py
+│   ├── robotic_arm_soldering_demo.py
+│   └── robotic_arm_OIST_logo_writing_sequence.py
+│
+├── models/                     # 3D CAD models and assemblies for automation
+│   ├── 15+ individual CAD parts (.SLDPRT)
+│   ├── Multiple assemblies (.SLDASM) for end-effectors, bases, and fixtures
+│   └── Supporting reference files and exports (.STEP / .STL)
+│
+├── media/                      # Demonstration videos and documentation
+│   ├── writing_demo_A.mp4
+│   ├── writing_demo_B.mp4
+│   ├── gluing_demo.mp4
+│   ├── soldering_demo.mp4
+│   ├── electrical_tester_demo.mp4
+│   ├── OIST_logo_writing_sequence_demo.mp4
+│   └── OIST_logo_writing_demo.mp4
+│
+├── LICENSE                        # License file
+└── README.md                      # Project documentation (this file)
+```
 
 ## Media Description
 The `media/` folder contains short demonstration clips showing the robotic arm executing programmed movements for:
