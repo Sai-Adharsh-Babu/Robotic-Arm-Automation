@@ -5,28 +5,11 @@ This project presents a proof-of-concept robotic arm automation system developed
 The objective was to explore automation techniques for precision handling, assembly, and demonstration tasks in biomedical device development.
 The robotic arm was programmed through its native control interface connected via a computer, allowing direct coding and task command execution.
 
-Project Structure
+### Repository Contents
 
-Robotic-Arm-Automation/
-│
-├── src/           # Source codes for robotic arm task sequences
-│   ├── robotic_arm_text_writing_sequence_A.py
-│   ├── robotic_arm_text_writing_sequence_B.py
-│   ├── robotic_arm_gluing_demo.py
-│   ├── robotic_arm_electrical_tester_demo.py
-│   └── robotic_arm_soldering_demo.py
-│
-├── models/        # 3D CAD models and assemblies used in the automation setup
-│   ├── grippers/
-│   ├── stands/
-│   ├── nozzle_fixtures/
-│   └── arm_assembly_files/
-│
-└── media/         # Demonstration videos and visual documentation
-    ├── writing_demo.mp4
-    ├── gluing_demo.mp4
-    ├── soldering_demo.mp4
-    └── electrical_test_demo.mp4
+- **src/** – Python codes for robotic arm task sequences (writing, gluing, soldering, testing)
+- **models/** – SolidWorks 3D models and assemblies for automation
+- **media/** – Demonstration videos showing working sequences
 
 Key Features
 
