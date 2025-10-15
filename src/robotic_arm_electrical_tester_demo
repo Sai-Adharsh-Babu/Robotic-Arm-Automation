@@ -1,0 +1,63 @@
+//Setup
+SetTrf(0, 0, 0, 0, 0, 0)
+SetGripperForce(100)     // 80% of 40 N = 32 N of force
+SetGripperVel(100)      // 100% of nominal speed (~100 mm/s)
+SetCartLinVel(200)        // Set linear speed to 50 mm/s
+SetCartAcc(100)     // mm/s²
+MoveGripper(30)//Ensure gripper isnt too wide to hit off things
+
+//Move to Slot 4
+MovePose(70, -110, 172, 90, 0.0, -90.0) // Neutral Position
+MovePose(-21.4, -150, 158, 90, 0.0, -90.0) // Move to pick position
+MovePose(-21.4 , -190, 158, 90, 0.0, -90.0) // Move to pick position
+
+// Close  gripper around the Tester
+Delay(1.0)
+GripperClose()                            // Fully closes the gripper
+Delay(1.0)                                // Give it time to apply force
+
+//Bring the Tester up out of the fixture
+MoveLinRelWrf(0.0, 0.0, 70, 0.0, 0.0, 0.0)// Bring the tester out
+Delay(0.5)
+
+//Set new velocities and acceleration for finer movements
+SetCartAcc(20)     // mm/s²
+SetCartLinVel(200)        // Set linear speed to 50 mm/s
+
+//Move above the Part
+MoveLinRelWrf(0.0, 30.0, 0.0, 0.0, 0.0, 0.0)// Bring the nozzle out
+MovePose(167.678403, 0.685904, 133.684122, -179.957858, 75.5, -179.580127)//Start Pose - Middle of the Part
+Delay(1)
+
+//Bring to Test Point 1
+MoveLinRelWrf(0.0, -20.0, 0.0, 0.0, 0.0, 0.0)
+Delay(0.5)
+MoveLinRelWrf(0.0, 0.0, -27.0, 0.0, 0.0, 0.0)//Lower Tester
+Delay(2)
+
+//Lift Tester
+MoveLinRelWrf(0.0, 0.0, 27.0, 0.0, 0.0, 0.0)
+
+//Bring to Test Point 2
+MoveLinRelWrf(0.0, 36.0, 0.0, 0.0, 0.0, 0.0)
+Delay(0.5)
+MoveLinRelWrf(0.0, 0.0, -25.0, 0.0, 0.0, 0.0)//Lower Tester
+Delay(2)
+
+//Lift Tester
+MoveLinRelWrf(0.0, 0.0, 25.0, 0.0, 0.0, 0.0)
+Delay(0.5)
+
+//Move to Slot 3 for Drop
+MovePose(70, -110, 172, 90, 0.0, -90.0) // Neutral Position
+MovePose(21.4, -150, 228, 90, 0.0, -90.0) // Move to pick position + 70
+MovePose(-21.4, -190, 228, 90, 0.0, -90.0) // Move to pick position +70
+
+MoveLinRelWrf(0.0, 0.0, -70, 0.0, 0.0, 0.0)// Insert the tester in the Slot
+Delay(0.5)
+GripperOpen()
+MoveGripper(30)//Ensure gripper isnt too wide to hit off things
+
+Delay(1)
+MoveLinRelWrf(0.0, 30.0,0.0, 0.0, 0.0, 0.0)// Bring the gripper Out
+MovePose(165, 0, 120, 0.0, 90.0, 0.0)//Move to Wait Position
