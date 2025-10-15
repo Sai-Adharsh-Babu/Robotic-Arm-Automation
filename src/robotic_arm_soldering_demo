@@ -1,0 +1,115 @@
+//PCB Soldering Code
+//Setup
+SetTrf(0, 0, 0, 0, 0, 0)
+SetGripperForce(80)     // 80% of 40 N = 32 N of force
+SetGripperVel(100)      // 100% of nominal speed (~100 mm/s)
+SetCartLinVel(50)        // Set linear speed to 50 mm/s
+SetCartAcc(100)     // mm/s² - 100
+MoveGripper(35)//Ensure gripper isnt too wide to hit off things
+
+//Move to Slot 5 / Soldering Iron
+MovePose(70, -110, 172, 90, 0.0, -90.0) // Neutral Position
+MovePose(-21, -148, 244, 90, 0.0, -90.0) // Move to pick position
+MovePose(-113.242471, -148, 244, 90, 0, -90)
+Delay(0.5)
+MovePose(-113.242471, -148, 177.236547, 90, 0, -90)
+Delay(0.5)
+MovePose(-110.6, -201, 177.236547, 90, 0, -90)
+
+// Close  gripper around the sprayer
+Delay(1.0)
+GripperClose()                            // Fully closes the gripper
+Delay(0.5)                                // Give it time to apply force
+
+//Bring the Soldering Iron up and out of the fixture
+MoveLinRelWrf(0.0, 0.0, 100, 0.0, 0.0, 0.0)// Bring the nozzle out
+Delay(0.5)
+MoveLinRelWrf(0.0, 90, 0.0, 0.0, 0.0, 0.0)// Bring the nozzle ouT
+Delay(0.5)
+MovePose(-110.6, -111, 277.236547, 27.529034, 1.943734, -90.942579)
+MovePose(151.10999, -217.358476, 274.572537, 63.050989, 24.380102, -86.307591)
+
+//Set new velocities and acceleration for finer movements
+SetCartAcc(20)     // mm/s²
+SetCartLinVel(40)        // Set linear speed to 50 mm/s
+
+//Parallel Soldering Sequence
+SetTrf(92, 0, 45, 0, 0, 0)// Adjust TRF to move about the nozzle tip
+MovePose(222.33, -115.1, 160, 80.637532, 56.884497, -101.413646)
+Delay(0.5)
+MovePose(224.18, -112.18, 77, 80.637532, 56.884497, -101.413646)// Move above the centre piece
+
+MoveLinRelWrf(0.0, 0.0, -10, 0.0, 0.0, 0.0)// Bring the nozzle out
+Delay(0.5)
+MoveLinRelWrf(0.0, 0.0, 10, 0.0, 0.0, 0.0)// Bring the nozzle out
+MoveLinRelWrf(2.515767, 0.0, 0.0, 0.0, 0.0, 0.0)// Bring the nozzle out
+MoveLinRelWrf(0.0, 0.0, -10, 0.0, 0.0, 0.0)// Bring the nozzle out
+Delay(0.5)
+
+MoveLinRelWrf(0.0, 0.0, 10, 0.0, 0.0, 0.0)// Bring the nozzle out
+MoveLinRelWrf(-2.5, 4., 0.0, 0.0, 0.0, 0.0)// Bring the nozzle out
+MoveLinRelWrf(0.0, 0.0, -10, 0.0, 0.0, 0.0)// Bring the nozzle out
+Delay(0.5)
+
+MoveLinRelWrf(0.0, 0.0, 10, 0.0, 0.0, 0.0)// Bring the nozzle out
+MoveLinRelWrf(2.515767, 0.0, 0.0, 0.0, 0.0, 0.0)// Bring the nozzle out
+MoveLinRelWrf(0.0, 0.0, -10, 0.0, 0.0, 0.0)// Bring the nozzle out
+Delay(0.5)
+
+MoveLinRelWrf(0.0, 0.0, 10, 0.0, 0.0, 0.0)// Bring the nozzle out
+MoveLinRelWrf(-2.5, 4, 0.0, 0.0, 0.0, 0.0)// Bring the nozzle out
+MoveLinRelWrf(0.0, 0.0, -10, 0.0, 0.0, 0.0)// Bring the nozzle out
+Delay(0.5)
+
+MoveLinRelWrf(0.0, 0.0, 10, 0.0, 0.0, 0.0)// Bring the nozzle out
+MoveLinRelWrf(2.515767, 0.0, 0.0, 0.0, 0.0, 0.0)// Bring the nozzle out
+MoveLinRelWrf(0.0, 0.0, -10, 0.0, 0.0, 0.0)// Bring the nozzle out
+Delay(0.5)
+
+MoveLinRelWrf(0.0, 0.0, 10, 0.0, 0.0, 0.0)// Bring the nozzle out
+MoveLinRelWrf(-2.5, 4., 0.0, 0.0, 0.0, 0.0)// Bring the nozzle out
+MoveLinRelWrf(0.0, 0.0, -10, 0.0, 0.0, 0.0)// Bring the nozzle out
+Delay(0.5)
+
+MoveLinRelWrf(0.0, 0.0, 10, 0.0, 0.0, 0.0)// Bring the nozzle out
+MoveLinRelWrf(2.515767, 0.0, 0.0, 0.0, 0.0, 0.0)// Bring the nozzle out
+MoveLinRelWrf(0.0, 0.0, -10, 0.0, 0.0, 0.0)// Bring the nozzle out
+Delay(0.5)
+
+MoveLinRelWrf(0.0, 0.0, 10, 0.0, 0.0, 0.0)// Bring the nozzle out
+MoveLinRelWrf(-2.5, 4., 0.0, 0.0, 0.0, 0.0)// Bring the nozzle out
+MoveLinRelWrf(0.0, 0.0, -10, 0.0, 0.0, 0.0)// Bring the nozzle out
+Delay(0.5)
+
+MoveLinRelWrf(0.0, 0.0, 10, 0.0, 0.0, 0.0)// Bring the nozzle out
+MoveLinRelWrf(2.515767, 0.0, 0.0, 0.0, 0.0, 0.0)// Bring the nozzle out
+MoveLinRelWrf(0.0, 0.0, -10, 0.0, 0.0, 0.0)// Bring the nozzle out
+Delay(0.5)
+
+//LED Soldering Sequence
+MovePose(226, -109.6, 106.62, 80.64, 56.9, -101.41)
+MoveLinRelWrf(0.0, 7, 0, 0.0, 0.0, 0.0)// Bring the nozzle out
+Delay(0.5)
+MoveLinRelWrf (0,10.76,0,-14.64,-1.7,2.39)
+Delay(1)
+MoveLinRelWrf(-1 ,-29.08,-43.04,0,0,0)
+Delay(1)
+MoveLinRelWrf(1 ,29.08,43.04,0,0,0)
+Delay(1)
+MoveLinRelWrf(1,-29.08,-43.04,0,0,0)
+Delay(1)
+MoveLinRelWrf(-1, 29.08,43.04,0,0,0)
+Delay(1)
+
+MovePose(70, -110, 172, 90, 0.0, -90.0) // Neutral Position
+MovePose(-21, -148, 244, 90, 0.0, -90.0) // Move to pick position
+MovePose(-113.242471, -148, 244, 90, 0, -90)
+Delay(0.5)
+MovePose(-110, -243.459663, 202.459767, 90, 0, -90)
+MoveLinRelWrf(0, 0, -120, 0, 0, 0 )
+Delay(0.5)
+
+Delay(1)
+GripperOpen()
+MoveLinRelWrf(0.0, 60, 0, 0.0, 0.0, 0.0)// Bring the nozzle out
+MovePose(165, 0, 120, 0.0, 90.0, 0.0)//Move to Wait Position
