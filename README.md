@@ -27,7 +27,6 @@ It demonstrates programmable task sequences for nozzle handling, gluing, solderi
 | `robotic_arm_gluing_demo.py` | Automated adhesive path application using precise trajectory control. |
 | `robotic_arm_electrical_tester_demo.py` | Probe movement demonstration for automated contact testing. |
 | `robotic_arm_soldering_demo.py` | Automated soldering sequence managing tip positioning and heating intervals. |
-| `robotic_arm_OIST_logo_writing_sequence.py` | Writing sequence demonstrating text tracing of the OIST logo. |
 
 > **Confidentiality Note:**  
 > This repository contains only non-confidential, internship-approved content.  
@@ -43,8 +42,8 @@ Robotic-Arm-Automation/
 │   ├── robotic_arm_text_writing_sequence_B.py
 │   ├── robotic_arm_gluing_demo.py
 │   ├── robotic_arm_electrical_tester_demo.py
-│   ├── robotic_arm_soldering_demo.py
-│   └── robotic_arm_OIST_logo_writing_sequence.py
+│   └── robotic_arm_soldering_demo.py
+│   
 │
 ├── models/                     # 3D CAD models and assemblies for automation
 │   ├── 15+ individual CAD parts (.SLDPRT)
@@ -56,9 +55,8 @@ Robotic-Arm-Automation/
 │   ├── writing_demo_B.mp4
 │   ├── gluing_demo.mp4
 │   ├── soldering_demo.mp4
-│   ├── electrical_tester_demo.mp4
-│   ├── OIST_logo_writing_sequence_demo.mp4
-│   └── OIST_logo_writing_demo.mp4
+│   └── electrical_tester_demo.mp4
+│  
 │
 ├── LICENSE                        # License file
 └── README.md                      # Project documentation (this file)
